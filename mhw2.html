@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+    <html>
+        <head> <!--scrivi i commenti-->
+            <meta charset="utf-8"> 
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel = "stylesheet" href ="mhw2.css">
+            <link href="<link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Mono&display=swap" rel="stylesheet">
+            <link rel="shortcut icon" href="https://images.vexels.com/media/users/3/129334/isolated/preview/5e167ebc8f4491a5b2b123c57218c034-basketball-player-circle-icon-by-vexels.png">
+            <script src="Loading.js" defer="true"></script>
+            <script src="SideNavMobile.js" defer="true"></script>
+            <script src="content.js" defer="true"></script>
+            <script src="OtherFunctions.js" defer="true"></script>
+            <title>NBA_simulator</title> 
+        </head>
+
+        <body>
+            <header>
+                <h1>
+                    <strong>NBA Simulator</strong><br/>
+                    <a class= "button">START</a></h1>
+                    <nav>
+                        <div class="menu" name="menu_sx">
+                            <a class="button" href="#">Homepage</a>
+                            <a class="button" href="#">Classifiche</a>
+                        </div>
+                        <div class="logo">
+                            <img src="https://i.imgur.com/rAQpEzo.png" >
+                        </div>
+                        <div class="menu" name="menu_dx">
+                            <a class="button" href="#">Tabellone</a>
+                            <a class="button" href="#">Scambi</a>
+                        </div>
+
+                        <!-- nav Mobile-->
+                        <div id="NavM">
+                            <div id="NewSideNav" class="sidenav">
+                                <a href="javascript:void(0)" class="closeNav" onclick="closeNav()">&times;</a>
+                                <a href="#">Homepage</a>
+                                <a href="#">Classifiche</a>
+                                <a href="#">Tabellone</a>
+                                <a href="#">Scambi</a>
+                            </div>
+                            <span id="burger" onclick="openNav()">&#9776;Menu</span>
+                        </div>
+                    </nav>
+                    
+            </header>
+
+            <section class="dad" name="contenuto" id='dadF'>
+                <div class="scelte" id="ChoiceSection">
+                    <h2>Le tue scelte</h2>
+                    <div class='team-grid' id='choices'>
+                    
+                    </div>
+                    <div class='team-grid' id='choicep'>
+
+                    </div>
+                </div>
+                
+                
+                <div class='contenuto'>
+                        <div class='box-squadre' id='box-squadre'>   
+                            <h1>Scegli il logo della tua squadra</h1>
+                            <input type='text' id='searchBar' onkeyup='search()' placeholder="inserisci il nome della squadra">
+                            <div class='team-grid' id='team-grid'>
+
+                                
+                            </div>
+                        </div> 
+                        
+                        <div class='box-giocatori' id='box-giocatori'>
+                            <h1>Scegli i componenti del tuo team</h1>
+                            <input type='text' id='searchBarG' onkeyup='searchG()' placeholder="inserisci il nome del giocatore">
+                            <div class='team-grid' id='player-grid'>
+                        
+                        </div>
+                </div>
+            </section>
+            
+            <footer>
+                <address><strong> Vecchio Gerardo 1000012124</strong></address>
+            </footer>
+        
+        </body>
+
+    </html>

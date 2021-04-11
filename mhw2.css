@@ -1,0 +1,386 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;  /*distacca le lettere di tot px l'una dall'altra*/
+    cursor: default;
+    font-family: 'Oswald', sans-serif;
+    --answer-padding :10px;
+}
+
+h1{
+    font-weight: 300;
+    font-size: 14px;
+    color: white;
+}
+.menu,a{
+    font-weight: 300;
+    font-size: 14px;
+    color: red;
+    text-decoration: none;
+}
+header{
+    background-color: white;
+    background-image:url("https://i.imgur.com/H3uLxUF.jpg");
+    background-size:cover;
+    background-position: center;
+    height: 800px;
+    position: relative;
+    margin: 10px;
+    margin-top: 90px;
+    font-size: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+header h1{
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: normal;
+    text-align: center;
+    z-index: 1; /*sta sopra l'immagine*/
+}
+
+header h1 a{
+    font-size: 0.5em;
+}
+
+h1 a.button{
+    padding: 5px 40px;
+    border-radius: 100px;
+    background-color: red;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Roboto Mono',sans-serif;
+    letter-spacing: 2px;   
+}
+
+
+
+h1 a.button:hover{
+    background-color: white;
+    color:red;
+}
+
+nav{
+    position: fixed;
+    top: 0px;
+    right: 10px;
+    left: 10px;
+    overflow: hidden;
+    background-color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.5 em;
+    padding: 15px;
+    z-index: 2;
+    border: 3px solid red;
+    border-top: none;
+    border-bottom-left-radius: 30px ;
+    border-bottom-right-radius: 30px;
+    font-family: 'Roboto Mono',sans-serif;
+    letter-spacing: 2px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a.button{
+    justify-content: space-around;
+    padding: 15px 15px;
+    border: 2px solid red;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menu a.button:hover{
+    background-color: white;
+    color:red;
+}
+/*  mobile*/
+#NavM{
+    display:none;
+}
+
+.sidenav{
+    position:fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: white;
+    height: 100%;
+    width: 0;
+    z-index: 3;
+    transition: 0.5s;
+    padding-top: 15px;
+}
+.sidenav a{
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: red;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover{
+    color: black;
+}
+
+.closeNav{
+    z-index: 3;
+}
+.sidenav .closeNav{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#burger{
+    color: red;
+    font-size: .8em;
+    cursor: pointer;
+}
+
+/*contenuti*/
+body{
+    background-color: lightgray;
+}
+/*section.dad{
+    text-align: center;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgba(83, 86, 90, 0.2);
+    border-radius: 30px;
+}*/
+
+section.dad img{
+    border-radius: 30px;
+}
+section.dad #dadF{
+    text-align: center;
+    justify-content:space-around;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgba(83, 86, 90, 0.2);
+    border-radius: 30px;
+}
+
+#ChoiceSection h2{
+    color: red;
+    background-color: white;
+    border: 3px solid red;
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    justify-content:center;
+    text-align: center;
+}
+
+#box-squadre h1, #box-giocatori h1{
+    color: red;
+    font-weight: bolder;
+}
+
+#searchBar, #searchBarG{
+    width: 40%;
+    font-size: 16px;
+    padding: 10px 10px 15px 10px;
+    border: 3px solid red;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.contenuto{
+    text-align: center;
+    margin:5px;
+}
+
+section.dad h1{
+    font-size: 1.5em;
+}
+
+.scelte h1{
+    text-align: center;
+}
+
+#icon{
+    height: 80px;
+    width: 80px;
+}
+
+#choicep .giocatore,#choices .squadra{
+    width:calc(20% - 2*var(--answer-padding));
+    justify-content: space-around;
+}
+
+.team-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.nome, .nomeG{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.team-grid .squadra, .team-grid .giocatore{
+    width: calc(32.5% - 2*var(--answer-padding));
+    background-color: white;
+    border: 3px solid red;
+    border-radius: 20px;
+    padding: var(--answer-padding);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.squadra h1{
+    color:red;
+    font-weight: bold;
+}
+.giocatore h1{
+    color:red;
+    font-weight: bold;
+}
+
+#choices, #choicep{
+    font-size: 50%;
+    display:"none";
+    justify-content: center;
+    justify-content: space-around;
+}
+
+#imgFav{
+    margin-top: 10px;
+}
+
+.titolo, .titoloG{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#choices #icon,#choicep #icon{
+    height: 50px;
+    width: 50px;
+    margin-right: 0px;
+}
+
+ .descrizioneS,  .descrizioneG{
+    color: black;
+    font-family: 'Roboto Mono',sans-serif;
+    font-size: 1em;
+    text-align: center;
+    display: none;
+    margin-top: 25px;
+}
+
+/*altra sezione*/
+footer{
+    margin-top: 10px;
+    padding: 25px;
+    background-color: white;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    text-align: center;
+    font-size: 1.5em;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 3px solid red;
+    border-bottom: none;
+}
+
+@media (max-width:1320px){
+    header {
+        height: 800px;
+        line-height: 1.2;
+        margin-top: 0px;
+    }
+}
+@media (min-width:769px)and (max-width: 1150px){
+
+    section.dad{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px){
+    header {
+        height: 300px;
+        line-height: 1.2;
+        margin-top: 0px;
+    }
+    #NavM{
+        display: initial;
+    }
+    section.dad{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .menu , .logo{
+        display: none;
+    }
+    #team-grid, #player-grid{
+        display: flex;
+        flex-direction: row;
+        align-items:initial;
+        justify-content: space-around;
+    }
+    #player-grid .giocatore,#team-grid .squadra{
+        width: 40%;
+    }
+    #choices .squadra, #choicep .giocatore{
+        width: 30%;
+    }
+}
+
+@media (max-width: 499px){
+    #team-grid, #player-grid{
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #player-grid .giocatore,#team-grid .squadra{
+        width: 100%;
+    }
+
+}
